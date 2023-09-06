@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>London Property Price Prediction</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="img"></div>
+<form class="form">
+    <h2>Size (Square ft)</h2>
+    <input class="area" type="text" id="uiSqft" class="floatLabel" name="sqft" value="1000">
+    <h2>Property Type</h2>
+    <div class="switch-field">
+        <input type="radio" id="radio-housetype-0" name="housetype" value="0"/>
+        <label for="radio-housetype-0">0</label>
+        <input type="radio" id="radio-housetype-1" name="housetype" value="1" checked/>
+        <label for="radio-housetype-1">1</label>
+        <input type="radio" id="radio-housetype-2" name="housetype" value="2"/>
+        <label for="radio-housetype-2">2</label>
+        <input type="radio" id="radio-housetype-3" name="housetype" value="3"/>
+        <label for="radio-housetype-3">3</label>
+        <input type="radio" id="radio-housetype-4" name="housetype" value="4"/>
+        <label for="radio-housetype-4">4</label>
+        <input type="radio" id="radio-housetype-5" name="housetype" value="5"/>
+        <label for="radio-housetype-5">5</label>
+        <input type="radio" id="radio-housetype-6" name="housetype" value="6"/>
+        <label for="radio-housetype-6">6</label>
+        <input type="radio" id="radio-housetype-7" name="housetype" value="7"/>
+        <label for="radio-housetype-7">7</label>
+    </div>
+</form>
+<form class="form">
+    <h2>No. of Bedrooms</h2>
+    <label for="bed">between 0 and 10</label>
+    <input type="number" id="bed" name="bed" min="0" max="10">
+</form>
+<form class="form">
+    <h2>No. of Bathrooms</h2>
+    <label for="bath">between 0 and 10</label>
+    <input type="number" id="bath" name="bath" min="0" max="10">
+</form>
+<form class="form">
+    <h2>No. of Receptions</h2>
+    <label for="recpt">between 0 and 10</label>
+    <input type="number" id="recpt" name="recpt" min="0" max="10">
+</div>
+<h2>Area</h2>
+<div>
+    <select class="Area" name="Area" id="uiArea">
+        <option value="" disabled="disabled" selected="selected">Choose an Area</option>
+        <option>e1</option>
+        <option>w8</option>
+        <!-- Ajoutez ici d'autres options pour la zone -->
+    </select>
+</div>
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+    <div id="uiEstimatedPrice" class="result">	<h2></h2> </div>
+</body>
+</html>
